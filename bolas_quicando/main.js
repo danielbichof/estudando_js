@@ -72,11 +72,11 @@ Ball.prototype.update = function() {
 
 let balls = []
 function loop() {
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
     ctx.fillRect(0, 0, width, height);
   
-    while (balls.length < 25) {
-      let size = random(10,20);
+    while (balls.length < 50) {
+      let size = random(10,30);
       let ball = new Ball(
         // ball position always drawn at least one ball width
         // away from the edge of the canvas, to avoid drawing errors
