@@ -28,10 +28,8 @@ Ball.prototype.draw = function() {
     //usamos 'fillStyle' para definir a cor que queremos que a forma seja — nós a definimos como a propriedade color da nossa bola.
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     /*
-    usamos o método  arc() para traçar uma forma de arco no papel. Seus parâmetros são:
-    A posição x e y do centro do arco — estamos especificando as propriedades x e y da nossa bola.
-    O raio do nosso arco — estamos especificando a propriedade size  da nossa bola.
-    Os dois últimos parâmetros especificam o número inicial e final de graus em volta do círculo em que o arco é desenhado entre eles. Aqui nós especificamos 0 graus e 2 * PI, que é o equivalente a 360 graus em radianos (irritantemente, você tem que especificar isso em radianos). Isso nos dá um círculo completo. Se você tivesse especificado apenas 1 * PI, você obteria um semicírculo (180 graus).*/
+    usamos o método  arc()  arco no ppara traçar uma forma deapel. Seus parâmetros são:
+    A posição x e y do centro do arco — estamos especificando as propriedades x e y da nossa bola. — Aqui nós especificamos 0 graus e 2 * PI, que é o equivalente a 360 graus em radianos (irritantemente, você tem que especificar isso em radianos). Isso nos dá um círculo completo. Se você tivesse especificado apenas 1 * PI, você obteria um semicírculo (180 graus).*/
 
     ctx.fill();//Esse metodo basicamente termina de desenhar a bola definida em beginPath() na cor definida em fillStyle
 }
