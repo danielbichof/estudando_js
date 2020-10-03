@@ -1,7 +1,6 @@
-// define variable for ball count paragraph
-
-const para = document.querySelector('p');
+/*const para = document.querySelector('p');
 let count = 0;
+
 
 // setup canvas
 
@@ -13,12 +12,10 @@ const height = canvas.height = window.innerHeight;
 
 // function to generate random number
 
-function random(min,max) {
-  const num = Math.floor(Math.random()*(max-min)) + min;
+function random(min, max) {
+  const num = Math.floor(Math.random() * (max - min + 1)) + min;
   return num;
 }
-
-// define shape constructor
 
 function Shape(x, y, velX, velY, exists) {
   this.x = x;
@@ -29,6 +26,7 @@ function Shape(x, y, velX, velY, exists) {
 }
 
 // define Ball constructor, inheriting from Shape
+//definindo contrutor de bola herdando o Shape
 
 function Ball(x, y, velX, velY, exists, color, size) {
   Shape.call(this, x, y, velX, velY, exists);
@@ -43,13 +41,16 @@ Ball.prototype.constructor = Ball;
 // define ball draw method
 
 Ball.prototype.draw = function() {
-  ctx.beginPath();
-  ctx.fillStyle = this.color;
+  ctx.beginPath();// usamos isso para declarar que queremos desenhar uma forma no papel.
+  ctx.fillStyle = this.color; //usamos 'fillStyle' para definir a cor que queremos que a forma seja — nós a definimos como a propriedade color da nossa bola.
+
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+  /* usamos o método arc() arco no para traçar uma forma deapel.*/
+
   ctx.fill();
 };
 
-// define ball update method
+// define ball update method/definindo atualização(para quando as bolas se moverem)
 
 Ball.prototype.update = function() {
   if((this.x + this.size) >= width) {
@@ -72,7 +73,7 @@ Ball.prototype.update = function() {
   this.y += this.velY;
 };
 
-// define ball collision detection
+// define ball collision detection//colisão das bolas
 
 Ball.prototype.collisionDetect = function() {
   for(var j = 0; j < balls.length; j++) {
@@ -89,6 +90,7 @@ Ball.prototype.collisionDetect = function() {
 };
 
 // define EvilCircle constructor, inheriting from Shape
+//contrucão da Bola maligna(a bola que controlamos), herdando Shape
 
 function EvilCircle(x, y, exists) {
   Shape.call(this, x, y, 20, 20, exists);
@@ -161,7 +163,7 @@ EvilCircle.prototype.collisionDetect = function() {
       if (distance < this.size + balls[j].size) {
         balls[j].exists = false;
         count--;
-        para.textContent = 'bolas restantes: ' + count;
+        para.textContent = 'Ball count: ' + count;
       }
     }
   }
@@ -173,7 +175,7 @@ EvilCircle.prototype.collisionDetect = function() {
 
 const balls = [];
 
-while(balls.length < 20) {
+while(balls.length < 25) {
   const size = random(10,20);
   let ball = new Ball(
     // ball position always drawn at least one ball width
@@ -188,7 +190,7 @@ while(balls.length < 20) {
   );
   balls.push(ball);
   count++;
-  para.textContent = 'bolas: ' + count;
+  para.textContent = 'Ball count: ' + count;
 }
 
 // define loop that keeps drawing the scene constantly
@@ -216,3 +218,4 @@ function loop() {
 }
 
 loop();
+*/
