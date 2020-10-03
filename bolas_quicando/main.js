@@ -93,7 +93,7 @@ Ball.prototype.collisionDetect = function() {
 function EvilCircle(x, y, exists) {
   Shape.call(this, x, y, 20, 20, exists);
 
-  this.color = 'white';
+  this.color = 'red';
   this.size = 10;
 }
 
@@ -214,5 +214,4 @@ function loop() {
 
   requestAnimationFrame(loop);
 }
-
 loop();
